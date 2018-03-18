@@ -1,5 +1,5 @@
 
-sudo apt install awscli emacs gcc git
+sudo apt install awscli emacs gcc git unzip
 
 # ================
 # Docker:
@@ -41,6 +41,7 @@ sudo pkill -SIGHUP dockerd
 # Test nvidia-smi with the latest official CUDA image
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
+
 wget http://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
 MINI_CONDA_HOME=/disk1/apps/minicoda
 bash ~/miniconda.sh -b -p ${MINI_CONDA_HOME}
@@ -50,6 +51,7 @@ source ${MINI_CONDA_HOME}/bin/activate demo
 conda install -c conda-forge tensorflow
 conda install -c conda-forge opencv
 conda install -c conda-forge boto3
+
 pip install imutils
 pip install horovod
 
